@@ -20,6 +20,8 @@ button{font:inherit}
 .nav-links a{color:var(--slate)}
 .nav-links a.active,.nav-links a:hover{color:var(--ink)}
 .nav-links .linkedin{border:1px solid var(--line);padding:8px 12px;border-radius:4px;color:var(--ink);background:rgba(255,255,255,.35)}
+.theme-toggle{border:1px solid var(--line);padding:8px 12px;border-radius:4px;color:var(--ink);background:transparent;cursor:pointer;font-size:.88rem;min-height:44px}
+.theme-toggle:hover{border-color:var(--blue);color:var(--blue)}
 .menu-toggle{display:none;background:transparent;border:1px solid var(--line);padding:8px 11px;border-radius:4px;color:var(--ink)}
 .hero{padding:96px 0 90px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(290px,.8fr);gap:76px;align-items:center}
 .eyebrow{font-size:.74rem;text-transform:uppercase;letter-spacing:.15em;font-weight:700;color:var(--coral);margin:0 0 18px}
@@ -119,9 +121,40 @@ button{font:inherit}
 .article-body p{color:#46515d;font-size:1.07rem;line-height:1.9}
 .article-body h2{margin-top:40px;letter-spacing:-.04em}
 .notice{font-size:.85rem;color:var(--slate);border-top:1px solid var(--line);padding-top:18px;margin-top:28px}
+.notes-section{padding-top:0;border-top:0}
+.learning-empty{margin-top:30px}
 img,video,iframe{max-width:100%}
 .hero>*,.split>*,.content-grid>*,.section-head>*,.reason-card,.value-card,.article>*{min-width:0}
 a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.skip-link{position:fixed;left:16px;top:12px;z-index:30;padding:10px 16px;background:var(--ink);color:var(--white);border-radius:4px;transform:translateY(-160%);transition:transform .18s}
+.skip-link:focus{transform:translateY(0);color:var(--white)}
+html[data-theme="dark"]{color-scheme:dark;--paper:#111820;--ink:#EDF2F7;--blue:#9BB0FF;--coral:#FF987F;--teal:#76D0CC;--slate:#A8B4C0;--line:#34414E;--white:#19232D;--pale-blue:#182433;--deep:#0B1117}
+html[data-theme="dark"] body{background:linear-gradient(180deg,var(--paper),#151F29);color:var(--ink)}
+html[data-theme="dark"] .site-header{background:rgba(17,24,32,.96)}
+html[data-theme="dark"] .nav-links .linkedin{background:rgba(255,255,255,.04)}
+html[data-theme="dark"] .focus-note{background:linear-gradient(180deg,#19232D,#1B2732)}
+html[data-theme="dark"] .section--white{background:#151F29}
+html[data-theme="dark"] .section--pale-blue{background:linear-gradient(180deg,#182433,#151F29);border-color:#2B3A4A}
+html[data-theme="dark"] .section--paper{background:#111820}
+html[data-theme="dark"] .section--blue{background:linear-gradient(135deg,#263B72,#30477D);border-color:#3C568D}
+html[data-theme="dark"] .cta{background:linear-gradient(135deg,#0B1218,#111B25);color:#EDF2F7}
+html[data-theme="dark"] .lead{color:#C5D0DA}
+html[data-theme="dark"] .timeline-item p,
+html[data-theme="dark"] .split p,
+html[data-theme="dark"] .prose p,
+html[data-theme="dark"] .prose ul,
+html[data-theme="dark"] .article p,
+html[data-theme="dark"] .article-body p,
+html[data-theme="dark"] .skill-group p{color:#C5D0DA}
+html[data-theme="dark"] .skill-list span{color:#D4DEE8;background:#202B36;border-color:#3A4856}
+html[data-theme="dark"] .value-card{background:#1A2530;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+html[data-theme="dark"] .value-card p{color:#C5D0DA}
+html[data-theme="dark"] .button{background:linear-gradient(135deg,#2948DB,#3B52B8);border-color:transparent;color:#FFFFFF}
+html[data-theme="dark"] .button:hover{background:linear-gradient(135deg,#3D5EF0,#4967D3)}
+html[data-theme="dark"] .button.secondary{background:transparent;color:var(--ink);border-color:#586675}
+html[data-theme="dark"] .button.secondary:hover{background:rgba(255,152,127,.08);border-color:var(--coral);color:var(--coral)}
+html[data-theme="dark"] .contact-link{background:rgba(255,255,255,.035)}
+html[data-theme="dark"] .empty-state{background:rgba(255,255,255,.025);border-color:#536170}
 @media(max-width:900px){
  .nav{height:68px}.menu-toggle{display:block}
  .nav-links{display:none;position:absolute;left:0;right:0;top:68px;padding:20px 24px 24px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:14px}
