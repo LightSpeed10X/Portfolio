@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 :root{
- --paper:#F7F4EE;--ink:#17202A;--blue:#2E5BFF;--coral:#FF7A59;--teal:#1DA5A6;
- --slate:#65707B;--line:#E6E1D8;--white:#FFFFFF;--pale-blue:#EEF4FF;--deep:#101820;
+ --paper:#F7F4EE;--ink:#17202A;--blue:#2948C8;--coral:#9E3F2B;--teal:#00696B;
+ --slate:#535F6B;--line:#E6E1D8;--white:#FFFFFF;--pale-blue:#EEF4FF;--deep:#101820;
  --soft-mint:#EAFBF6;--soft-peach:#FFF0EB;--max:1120px
 }
 *{box-sizing:border-box}
@@ -137,6 +137,8 @@ html[data-theme="dark"] .section--white{background:#151F29}
 html[data-theme="dark"] .section--pale-blue{background:linear-gradient(180deg,#182433,#151F29);border-color:#2B3A4A}
 html[data-theme="dark"] .section--paper{background:#111820}
 html[data-theme="dark"] .section--blue{background:linear-gradient(135deg,#263B72,#30477D);border-color:#3C568D}
+html[data-theme="dark"] .section--ink,
+html[data-theme="dark"] .section--blue{color:#EDF2F7}
 html[data-theme="dark"] .cta{background:linear-gradient(135deg,#0B1218,#111B25);color:#EDF2F7}
 html[data-theme="dark"] .lead{color:#C5D0DA}
 html[data-theme="dark"] .timeline-item p,
