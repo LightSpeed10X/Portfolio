@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostafizur Karim | Work, Learning & Progress</title>
+  <meta name="description" content="Personal portfolio, career journal, and learning log of Mostafizur Karim — Back Office Admin & Process Executive specializing in backend operations, documentation, KYC support, and customer communication.">
+  
+  <!-- Open Graph / Social Sharing Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mostafizur Karim | Work, Learning & Progress">
+  <meta property="og:description" content="Building a career through practical work, continuous learning, and attention to detail in back-office operations and customer support.">
+  <meta name="author" content="Mostafizur Karim">
+
+  <!-- Editorial Typography: DM Sans (UI/Body) & Newsreader (Editorial Headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN SYSTEM & TOKENS
+       ========================================================================== */
+    :root {
+      --bg-paper: #F7F6F2;
+      --surface-white: #FFFFFF;
+      --ink-primary: #17202A;
+      --ink-muted: #65707B;
+      --accent-cobalt: #335CFF;
+      --accent-cobalt-hover: #2447D4;
+      --border-subtle: #E3E6EA;
+
+      --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: 'Newsreader', Georgia, Cambria, "Times New Roman", serif;
+
+      --max-width-grid: 1080px;
+      --max-width-prose: 660px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background-color: var(--bg-paper);
+      color: var(--ink-primary);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ==========================================================================
+       2. TYPOGRAPHY & HIERARCHY
+       ========================================================================== */
+    h1, h2, h3, .serif-heading {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      color: var(--ink-primary);
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 3.8vw, 2.85rem);
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: var(--ink-primary);
+    }
+
+    .text-muted {
+      color: var(--ink-muted);
+    }
+
+    .meta-label {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--ink-muted);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: var(--accent-cobalt);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.15s ease;
+    }
+
+    a:hover, a:focus-visible {
+      color: var(--accent-cobalt-hover);
+    }
+
+    /* ==========================================================================
+       3. LAYOUT & EDITORIAL GRID
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: var(--max-width-grid);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .prose-container {
+      max-width: var(--max-width-prose);
+    }
+
+    .section-divider {
+      border: 0;
+      border-top: 1px solid var(--border-subtle);
+      margin: 3.5rem 0;
+    }
+
+    .editorial-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .editorial-asymmetric {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 820px) {
+      .editorial-grid-2col {
+        grid-template-columns: 1.35fr 0.85fr;
+        gap: 4rem;
+        align-items: start;
+      }
+      .editorial-asymmetric {
+        grid-template-columns: 260px 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    /* ==========================================================================
+       4. HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: var(--bg-paper);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4.5rem;
+    }
+
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--ink-primary);
+    }
+
+    .wordmark-monogram {
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid var(--ink-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      font-weight: 500;
+      background-color: var(--surface-white);
+      color: var(--ink-primary);
+    }
+
+    .wordmark-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wordmark-name {
+      font-weight: 600;
+      font-size: 0.98rem;
+      line-height: 1.1;
+      color: var(--ink-primary);
+    }
+
+    .wordmark-sub {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+    }
+
+    .primary-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      gap: 1.35rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      background: none;
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink-muted);
+      cursor: pointer;
+      padding: 0.35rem 0;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      color: var(--ink-primary);
+    }
+
+    .nav-link.active {
+      color: var(--accent-cobalt);
+      border-bottom-color: var(--accent-cobalt);
+    }
+
+    .nav-external {
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--ink-muted);
+      text-decoration: none;
+      padding-left: 1rem;
+      border-left: 1px solid var(--border-subtle);
+    }
+
+    .nav-external:hover {
+      color: var(--accent-cobalt);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      padding: 0.45rem 0.75rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--ink-primary);
+      cursor: pointer;
+      background-color: var(--surface-white);
+    }
+
+    @media (max-width: 819px) {
+      .mobile-menu-btn {
+        display: inline-block;
+      }
+      .primary-nav {
+        display: none;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        right: 0;
+        background-color: var(--surface-white);
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 1.25rem 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .primary-nav.open {
+        display: flex;
+      }
+      .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        width: 100%;
+      }
+      .nav-external {
+        padding-left: 0;
+        border-left: none;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--border-subtle);
+        width: 100%;
+      }
+    }
+
+    /* ==========================================================================
+       5. BUTTONS & CONTROLS
+       ========================================================================== */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.7rem 1.25rem;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-cobalt);
+      color: var(--surface-white);
+    }
+
+    .btn-primary:hover, .btn-primary:focus-visible {
+      background-color: var(--accent-cobalt-hover);
+      color: var(--surface-white);
+    }
+
+    .btn-secondary {
+      background-color: var(--surface-white);
+      color: var(--ink-primary);
+      border-color: var(--border-subtle);
+    }
+
+    .btn-secondary:hover, .btn-secondary:focus-visible {
+      border-color: var(--ink-primary);
+      color: var(--ink-primary);
+    }
+
+    /* ==========================================================================
+       6. EDITORIAL COMPONENTS (PANELS, TIMELINES, LISTS)
+       ========================================================================== */
+    main {
+      flex: 1;
+      padding: 3.5rem 0 5rem;
+    }
+
+    .page-view {
+      display: none;
+    }
+
+    .page-view.active {
+      display: block;
+    }
+
+    /* Profile Note Panel (Hero Right Column) */
+    .profile-note-panel {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-subtle);
+      padding: 1.75rem;
+    }
+
+    .profile-note-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .definition-list {
+      display: grid;
+      gap: 1.1rem;
+    }
+
+    .definition-item dt {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .definition-item dd {
+      font-size: 0.94rem;
+      color: var(--ink-primary);
+      line-height: 1.45;
+    }
+
+    /* Timeline List */
+    .timeline-list {
+      list-style: none;
+      border-left: 1px solid var(--border-subtle);
+      margin-left: 0.5rem;
+      padding-left: 1.75rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -2.06rem;
+      top: 0.35rem;
+      width: 9px;
+      height: 9px;
+      background-color: var(--bg-paper);
+      border: 2px solid var(--ink-primary);
+      border-radius: 50%;
+    }
+
+    .timeline-item.current::before {
+      background-color: var(--accent-cobalt);
+      border-color: var(--accent-cobalt);
+    }
+
+    .timeline-period {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--ink-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    /* Editorial Article / Note List */
+    .editorial-list {
+      list-style: none;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .editorial-list-item {
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 1.6rem 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    @media (min-width: 720px) {
+      .editorial-list-item {
+        grid-template-columns: 190px 1fr;
+        gap: 2rem;
+        align-items: baseline;
+      }
+    }
+
+    .note-meta {
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.5rem;
+      border: 1px solid var(--border-subtle);
+      background-color: var(--surface-white);
+      color: var(--ink-muted);
+      margin-top: 0.35rem;
+    }
+
+    .note-title-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      text-align: left;
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--ink-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      margin-bottom: 0.45rem;
+      display: inline-block;
+    }
+
+    .note-title-btn:hover {
+      color: var(--accent-cobalt);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Structured Grid for Experience Responsibilities */
+    .responsibility-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (min-width: 700px) {
+      .responsibility-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .responsibility-box {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-subtle);
+      padding: 1.5rem;
+    }
+
+    .responsibility-box ul {
+      padding-left: 1.1rem;
+      margin-top: 0.65rem;
+      color: var(--ink-primary);
+      font-size: 0.94rem;
+    }
+
+    .responsibility-box li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Skills Matrix (No Arbitrary Progress Bars) */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 1rem;
+    }
+
+    .skills-table th,
+    .skills-table td {
+      text-align: left;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      font-size: 0.95rem;
+    }
+
+    .skills-table th {
+      width: 32%;
+      font-weight: 600;
+      color: var(--ink-primary);
+      padding-right: 1.5rem;
+    }
+
+    /* Learning Log Entries */
+    .log-entry {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-subtle);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .log-entry-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 2.5rem 0;
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      background-color: var(--bg-paper);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NAVIGATION
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#home" class="wordmark" onclick="navigateTo('home', event)">
+        <span class="wordmark-monogram" aria-hidden="true">MK</span>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Mostafizur Karim</span>
+          <span class="wordmark-sub">Work, Learning &amp; Progress</span>
+        </span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="primaryNav">
+        Menu
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><button class="nav-link active" data-target="home" onclick="navigateTo('home')">Home</button></li>
+          <li><button class="nav-link" data-target="about" onclick="navigateTo('about')">About</button></li>
+          <li><button class="nav-link" data-target="experience" onclick="navigateTo('experience')">Experience</button></li>
+          <li><button class="nav-link" data-target="notes" onclick="navigateTo('notes')">Notes</button></li>
+          <li><button class="nav-link" data-target="learning" onclick="navigateTo('learning')">Learning</button></li>
+          <li><button class="nav-link" data-target="contact" onclick="navigateTo('contact')">Contact</button></li>
+        </ul>
+        <a href="https://www.linkedin.com/in/mostafizurx/" target="_blank" rel="noopener noreferrer" class="nav-external">
+          LinkedIn &#8599;
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ======================================================================
+         1. HOMEPAGE VIEW
+         ====================================================================== -->
+    <section id="view-home" class="page-view active" aria-labelledby="home-heading">
+      <div class="editorial-grid-2col">
+        <div>
+          <span class="meta-label">Personal Portfolio &amp; Work Journal</span>
+          <h1 id="home-heading">I'm building my career by doing the work, learning from it, and getting better at the details.</h1>
+          <p class="text-muted" style="font-size: 1.08rem;">
+            I'm Mostafizur Karim, a graduate working in back-office operations and customer support. This is where I document my professional journey, share what practical work is teaching me, and keep track of what I'm learning.
+          </p>
+          <div class="btn-group">
+            <button class="btn btn-primary" onclick="navigateTo('experience')">Explore my experience</button>
+            <button class="btn btn-secondary" onclick="navigateTo('notes')">Read my notes</button>
+          </div>
+        </div>
+
+        <!-- Current Focus Panel -->
+        <aside class="profile-note-panel" aria-label="Current Professional Focus">
+          <div class="profile-note-header">
+            <span class="meta-label" style="margin-bottom: 0;">Profile Note</span>
+            <span style="font-size: 0.8rem; color: var(--ink-muted);">West Bengal, India</span>
+          </div>
+          <dl class="definition-list">
+            <div class="definition-item">
+              <dt>Current Role</dt>
+              <dd>Back Office Admin / Process Executive at Smart Capital</dd>
+            </div>
+            <div class="definition-item">
+              <dt>Main Focus</dt>
+              <dd>Backend operations, documentation, and customer support</dd>
+            </div>
+            <div class="definition-item">
+              <dt>Career Interests</dt>
+              <dd>Business process services, client onboarding, and operations roles</dd>
+            </div>
+            <div class="definition-item">
+              <dt>Personal Focus</dt>
+              <dd>Practical learning, record accuracy, and professional development</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Experience Preview -->
+      <div class="editorial-asymmetric">
+        <div>
+          <span class="meta-label">Present Work</span>
+          <h2>Current Experience</h2>
+        </div>
+        <div>
+          <div style="background: var(--surface-white); border: 1px solid var(--border-subtle); padding: 1.75rem;">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+              <h3 style="margin-bottom: 0;">Back Office Admin / Process Executive</h3>
+              <span class="text-muted" style="font-size: 0.88rem; font-weight: 500;">September 2025 – Present</span>
+            </div>
+            <p class="text-muted" style="font-size: 0.92rem; margin-bottom: 1rem;">
+              Smart Capital (Mutual fund distributor associated with NJ Wealth)
+            </p>
+            <p style="font-size: 0.96rem;">
+              Supporting day-to-day backend operations, assisting with client onboarding, collecting and checking client documentation, supporting basic KYC verification, maintaining client records, and responding to routine customer queries via email and chat.
+            </p>
+            <button class="btn btn-secondary" style="margin-top: 0.5rem; padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="navigateTo('experience')">
+              View full responsibilities &amp; skills &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Career & Learning Timeline -->
+      <div class="editorial-asymmetric">
+        <div>
+          <span class="meta-label">Chronology</span>
+          <h2>Career &amp; Academic Timeline</h2>
+          <p class="text-muted" style="font-size: 0.9rem;">
+            A straightforward record of my formal education, self-directed preparation, and current operational role.
+          </p>
+        </div>
+        <div>
+          <ol class="timeline-list">
+            <li class="timeline-item current">
+              <span class="timeline-period">September 2025 – Present</span>
+              <div class="timeline-title">Back Office Admin / Process Executive — Smart Capital</div>
+              <p class="text-muted" style="font-size: 0.92rem; margin-bottom: 0;">
+                Handling daily backend processing, client documentation checks, basic KYC verification support, record maintenance, and routine customer queries.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-period">After Graduation (Self-Directed Preparation)</span>
+              <div class="timeline-title">Practical Office Skills &amp; Career Preparation</div>
+              <p class="text-muted" style="font-size: 0.92rem; margin-bottom: 0;">
+                Focused on developing practical office competencies in Microsoft Excel and Word, practising professional written English, refining interview communication, and preparing for entry-level back-office and business process roles.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-period">2023</span>
+              <div class="timeline-title">B.A. Honours in Education — West Bengal State University (WBSU)</div>
+              <p class="text-muted" style="font-size: 0.92rem; margin-bottom: 0;">
+                Graduated with 70% (equivalent to 8.50 CGPA as stated in CV).
+              </p>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-period">2020</span>
+              <div class="timeline-title">Completed Class XII — WBCHSE</div>
+              <p class="text-muted" style="font-size: 0.92rem; margin-bottom: 0;">
+                Higher Secondary Examination, 65.40%.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-period">2018</span>
+              <div class="timeline-title">Completed Class X — WBBSE</div>
+              <p class="text-muted" style="font-size: 0.92rem; margin-bottom: 0;">
+                Secondary Examination, 69.50%.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Latest Working Notes Preview -->
+      <div class="editorial-asymmetric">
+        <div>
+          <span class="meta-label">Writing</span>
+          <h2>Notes from the Work in Progress</h2>
+          <p class="text-muted" style="font-size: 0.9rem;">
+            Working drafts and practical observations on back-office workflows, documentation accuracy, and career building.
+          </p>
+          <button class="btn btn-secondary" style="margin-top: 0.5rem; padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="navigateTo('notes')">
+            Browse all notes &rarr;
+          </button>
+        </div>
+        <div>
+          <ul class="editorial-list" id="home-notes-list"></ul>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Closing Invitation -->
+      <div style="background: var(--surface-white); border: 1px solid var(--border-subtle); padding: 2.25rem;">
+        <span class="meta-label">Professional Connections</span>
+        <h2 style="max-width: 680px; margin-bottom: 0.85rem;">
+          If you're working in operations, business process services, or customer support, I'd be glad to connect and learn from your experience.
+        </h2>
+        <div class="btn-group" style="margin-top: 1.25rem;">
+          <a href="https://www.linkedin.com/in/mostafizurx/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Connect on LinkedIn &#8599;
+          </a>
+          <a href="mailto:mostafizurkarim786@gmail.com" class="btn btn-secondary">
+            Email: mostafizurkarim786@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. ABOUT PAGE VIEW
+         ====================================================================== -->
+    <section id="view-about" class="page-view" aria-labelledby="about-heading">
+      <div class="prose-container">
+        <span class="meta-label">About &amp; Career Story</span>
+        <h1 id="about-heading">Building a career through practical work, continuous learning, and attention to detail.</h1>
+        <p class="text-muted" style="font-size: 1.08rem; border-left: 2px solid var(--accent-cobalt); padding-left: 1rem; margin: 1.75rem 0;">
+          "I am building my career through practical work, continuous learning, and attention to detail. My journey is still developing, and I want to document it honestly."
+        </p>
+
+        <h2 style="margin-top: 2.5rem;">Where I Started</h2>
+        <p>
+          I grew up and studied in West Bengal, India. I completed my Class X board examinations under WBBSE in 2018 (69.50%) and my Class XII examinations under WBCHSE in 2020 (65.40%). In 2023, I graduated with a B.A. Honours in Education from West Bengal State University (WBSU), achieving 70% (equivalent to an 8.50 CGPA as stated on my CV).
+        </p>
+        <p>
+          Studying Education helped me understand how information is structured, explained, and communicated clearly. However, when I finished university, I knew that a degree alone does not automatically translate into workplace readiness. I needed practical, repeatable office skills that teams rely on every day.
+        </p>
+
+        <h2 style="margin-top: 2.25rem;">Learning Beyond the Classroom</h2>
+        <p>
+          After graduating in 2023, I used the time available to me to focus on practical self-improvement rather than waiting passively. I worked on strengthening my command of Microsoft Excel and Word, organising digital records, and improving my written and spoken professional English.
+        </p>
+        <p>
+          I also spent time studying how entry-level operations and business process services roles function in practice—reworking my CV to reflect real capabilities, practising structured interview responses, and learning how to communicate clearly with recruiters and hiring managers.
+        </p>
+
+        <h2 style="margin-top: 2.25rem;">What Practical Work Has Taught Me</h2>
+        <p>
+          Since September 2025, I have been working as a Back Office Admin / Process Executive at Smart Capital, a mutual fund distributor associated with NJ Wealth. Working in a real operational environment has taught me lessons that only come from handling actual workflows:
+        </p>
+        <ul style="padding-left: 1.25rem; margin-bottom: 1.25rem;">
+          <li style="margin-bottom: 0.5rem;"><strong>Accuracy prevents downstream delays:</strong> Checking a client's documentation or KYC details carefully the first time saves hours of follow-up corrections later.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Consistency matters more than speed alone:</strong> Following standard operational procedures step by step ensures records stay reliable for the entire team.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Clear, calm communication builds trust:</strong> When answering routine customer queries over email or chat, people value straightforward, accurate updates over complicated jargon.</li>
+        </ul>
+
+        <h2 style="margin-top: 2.25rem;">What I'm Working Towards</h2>
+        <p>
+          I am exploring opportunities in back-office operations, business process services (BPS), documentation verification, client onboarding, and customer support. My goal is to join an experienced operational team where I can contribute dependable daily execution, learn established enterprise workflows, and build a stable, long-term career.
+        </p>
+        <p>
+          I created this website to document that process openly—so recruiters, hiring managers, and experienced professionals can see how I think, how I work, and what I am learning along the way.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. EXPERIENCE & EDUCATION PAGE VIEW
+         ====================================================================== -->
+    <section id="view-experience" class="page-view" aria-labelledby="exp-heading">
+      <span class="meta-label">Verified Record</span>
+      <h1 id="exp-heading">Experience, Skills &amp; Education</h1>
+      <p class="text-muted" style="max-width: 680px;">
+        A factual overview of my current role, operational responsibilities, practical skills, and academic qualifications.
+      </p>
+
+      <hr class="section-divider">
+
+      <!-- Current Role -->
+      <div class="editorial-asymmetric">
+        <div>
+          <span class="meta-label">Current Role</span>
+          <h2 style="font-size: 1.4rem;">Smart Capital</h2>
+          <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.4rem;">
+            Mutual fund distributor associated with NJ Wealth
+          </p>
+          <p style="font-size: 0.88rem; font-weight: 600; color: var(--accent-cobalt);">
+            September 2025 – Present
+          </p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.3rem; font-family: var(--font-serif); font-weight: 400; margin-bottom: 0.75rem;">
+            Back Office Admin / Process Executive
+          </h3>
+          <p class="text-muted">
+            Supporting day-to-day backend administration, client onboarding workflows, documentation checks, and routine customer communication.
+          </p>
+
+          <div class="responsibility-grid">
+            <div class="responsibility-box">
+              <h3>Backend Operations</h3>
+              <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 0.5rem;">
+                Routine processing and administrative support for the mutual fund distribution business.
+              </p>
+              <ul>
+                <li>Supporting day-to-day backend operations and transaction processing workflows.</li>
+                <li>Organising operational information and following established internal checklists.</li>
+              </ul>
+            </div>
+
+            <div class="responsibility-box">
+              <h3>Documentation &amp; Onboarding</h3>
+              <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 0.5rem;">
+                Helping collect client documents and supporting basic KYC checks and onboarding processes.
+              </p>
+              <ul>
+                <li>Assisting with new client onboarding steps.</li>
+                <li>Collecting and checking client documentation for completeness and legibility.</li>
+                <li>Supporting basic KYC verification requirements.</li>
+              </ul>
+            </div>
+
+            <div class="responsibility-box">
+              <h3>Customer Communication</h3>
+              <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 0.5rem;">
+                Handling routine queries through email and chat.
+              </p>
+              <ul>
+                <li>Responding to routine customer queries through email and chat channels.</li>
+                <li>Providing clear status updates and basic documentation guidance.</li>
+              </ul>
+            </div>
+
+            <div class="responsibility-box">
+              <h3>Records &amp; Organisation</h3>
+              <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 0.5rem;">
+                Maintaining and updating client information and records.
+              </p>
+              <ul>
+                <li>Maintaining and updating accurate client records in internal sheets and systems.</li>
+                <li>Cross-checking data entries to reduce discrepancies.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Anonymised Process Example -->
+      <div class="editorial-asymmetric">
+        <div>
+          <span class="meta-label">Workflow Approach</span>
+          <h2 style="font-size: 1.4rem;">How I Approach a Standard Verification Task</h2>
+          <p class="text-muted" style="font-size: 0.86rem;">
+            An anonymised illustration of how I organize routine onboarding and document checks.
+          </p>
+        </div>
+        <div style="background: var(--surface-white); border: 1px solid var(--border-subtle); padding: 1.75rem;">
+          <ol style="padding-left: 1.25rem; display: grid; gap: 0.9rem; font-size: 0.95rem;">
+            <li>
+              <strong>Initial Intake &amp; Checklist Review:</strong> When a new onboarding request arrives, I first verify that all required basic documents are attached before starting data entry.
+            </li>
+            <li>
+              <strong>Detail Cross-Checking:</strong> I compare key fields (such as spelling of names, dates, and identification numbers) across submitted documents to ensure consistency for basic KYC support.
+            </li>
+            <li>
+              <strong>Clear Follow-Up on Missing Items:</strong> If a document is unclear or incomplete, I note the exact missing requirement so the client can be informed clearly in a single email or chat message rather than multiple back-and-forth messages.
+            </li>
+            <li>
+              <strong>Record Updating &amp; Filing:</strong> Once verified, I update the internal tracking record accurately so the next stage of processing can proceed smoothly.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Practical Skills & Languages -->
+      <div class="editorial-asymmetric">
+        <div>
+          <span class="meta-label">Capabilities</span>
+          <h2 style="font-size: 1.4rem;">Practical Skills &amp; Languages</h2>
+        </div>
+        <div>
+          <table class="skills-table" aria-label="Practical Skills and Languages">
+            <tbody>
+              <tr>
+                <th>Operations &amp; Processing</th>
+                <td>Backend data processing, client onboarding support, following standard operational procedures.</td>
+              </tr>
+              <tr>
+                <th>Documentation &amp; KYC</th>
+                <td>Document handling and verification, basic KYC support, completeness and accuracy checks.</td>
+              </tr>
+              <tr>
+                <th>Data &amp; Record Management</th>
+                <td>Data entry, client record maintenance, information organisation.</td>
+              </tr>
+              <tr>
+                <th>Customer Support</th>
+                <td>Email and chat-based customer support for routine queries and status updates.</td>
+              </tr>
+              <tr>
+                <th>Office Tools</th>
+                <td>Microsoft Excel, Microsoft Word, general computer operations, and internet research.</td>
+              </tr>
+              <tr>
+                <th>Languages</th>
+                <td>
+                  <strong>Bengali:</strong> Native &nbsp;|&nbsp;
+                  <strong>English:</strong> Working proficiency &nbsp;|&nbsp;
+                  <strong>Hindi:</strong> Conversational spoken Hindi
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Education Section -->
+      <div class="editorial-asymmetric">
+        <div>
+          <span class="meta-label">Academic Background</span>
+          <h2 style="font-size: 1.4rem;">Education</h2>
+        </div>
+        <div>
+          <table class="skills-table" aria-label="Academic Qualifications">
+            <tbody>
+              <tr>
+                <th>2023 — B.A. Honours in Education</th>
+                <td>
+                  <strong>West Bengal State University (WBSU)</strong><br>
+                  <span class="text-muted">Score: 70% (equivalent to 8.50 CGPA as stated in CV)</span>
+                </td>
+              </tr>
+              <tr>
+                <th>2020 — Class XII (Higher Secondary)</th>
+                <td>
+                  <strong>West Bengal Council of Higher Secondary Education (WBCHSE)</strong><br>
+                  <span class="text-muted">Score: 65.40%</span>
+                </td>
+              </tr>
+              <tr>
+                <th>2018 — Class X (Secondary)</th>
+                <td>
+                  <strong>West Bengal Board of Secondary Education (WBBSE)</strong><br>
+                  <span class="text-muted">Score: 69.50%</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. NOTES (BLOG) PAGE VIEW + READER VIEW
+         ====================================================================== -->
+    <section id="view-notes" class="page-view" aria-labelledby="notes-heading">
+      <div id="notes-index-container">
+        <span class="meta-label">Personal Blog</span>
+        <h1 id="notes-heading">Notes from the Work in Progress</h1>
+        <p class="text-muted" style="max-width: 660px;">
+          Practical observations, lessons learned, and reflections on back-office operations, documentation accuracy, and early-career development.
+        </p>
+
+        <div style="background: var(--surface-white); border: 1px solid var(--border-subtle); padding: 1rem 1.25rem; margin: 1.5rem 0 2.25rem; font-size: 0.88rem; color: var(--ink-muted);">
+          <strong>Editorial Transparency Note:</strong> This site is newly launched. The entries below are clearly marked as <em>Working Drafts</em> being prepared for publication. No client data or confidential workplace processes are ever shared here.
+        </div>
+
+        <ul class="editorial-list" id="full-notes-list"></ul>
+      </div>
+
+      <!-- Individual Article Reader View -->
+      <article id="note-reader-container" class="prose-container" style="display: none;" aria-live="polite">
+        <button class="btn btn-secondary" style="margin-bottom: 2rem; padding: 0.45rem 0.9rem; font-size: 0.85rem;" onclick="closeNoteReader()">
+          &larr; Back to all notes
+        </button>
+        <div id="note-reader-content"></div>
+      </article>
+    </section>
+
+    <!-- ======================================================================
+         5. LEARNING LOG PAGE VIEW
+         ====================================================================== -->
+    <section id="view-learning" class="page-view" aria-labelledby="learning-heading">
+      <div class="editorial-asymmetric">
+        <div>
+          <span class="meta-label">Continuous Improvement</span>
+          <h1 id="learning-heading" style="font-size: 2rem;">Learning Log</h1>
+          <p class="text-muted" style="font-size: 0.92rem;">
+            Unlike the longer reflections in my Notes section, this log tracks short, practical entries on skills I am practising, lessons from daily work, and goals for the next stage of my career.
+          </p>
+        </div>
+        <div id="learning-log-container"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. CONTACT PAGE VIEW
+         ====================================================================== -->
+    <section id="view-contact" class="page-view" aria-labelledby="contact-heading">
+      <div class="prose-container">
+        <span class="meta-label">Get in Touch</span>
+        <h1 id="contact-heading">Contact &amp; Professional Connections</h1>
+        <p style="font-size: 1.08rem;">
+          I'm open to meaningful professional conversations about back-office operations, business process services, documentation, and customer support. I'm also interested in learning from people with experience in these fields.
+        </p>
+
+        <div style="background: var(--surface-white); border: 1px solid var(--border-subtle); padding: 2rem; margin-top: 2rem;">
+          <dl class="definition-list">
+            <div class="definition-item">
+              <dt>Email</dt>
+              <dd style="font-size: 1.05rem; font-weight: 500;">
+                <a href="mailto:mostafizurkarim786@gmail.com">mostafizurkarim786@gmail.com</a>
+              </dd>
+            </div>
+            <div class="definition-item">
+              <dt>LinkedIn</dt>
+              <dd style="font-size: 1.05rem; font-weight: 500;">
+                <a href="https://www.linkedin.com/in/mostafizurx/" target="_blank" rel="noopener noreferrer">
+                  https://www.linkedin.com/in/mostafizurx/ &#8599;
+                </a>
+              </dd>
+            </div>
+            <div class="definition-item">
+              <dt>Location</dt>
+              <dd>West Bengal, India</dd>
+            </div>
+            <div class="definition-item">
+              <dt>Roles of Interest</dt>
+              <dd>Back-Office Operations, Business Process Services (BPS), Client Onboarding, Documentation Verification, and Customer Support.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Mostafizur Karim</strong> &mdash; Work, Learning &amp; Progress · West Bengal, India
+      </div>
+      <ul class="footer-links">
+        <li><a href="#about" onclick="navigateTo('about', event)">About</a></li>
+        <li><a href="#experience" onclick="navigateTo('experience', event)">Experience</a></li>
+        <li><a href="#notes" onclick="navigateTo('notes', event)">Notes</a></li>
+        <li><a href="https://www.linkedin.com/in/mostafizurx/" target="_blank" rel="noopener noreferrer">LinkedIn &#8599;</a></li>
+        <li><a href="mailto:mostafizurkarim786@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       CONTENT STORE & APPLICATION SCRIPT (DECOUPLED DATA + VIEW ROUTER)
+       ======================================================================== -->
+  <script>
+    /**
+     * 1. DECOUPLED BLOG / NOTES DATA
+     * Honesty rule enforced: Clearly marked as Working Drafts without invented publication dates.
+     */
+    const NOTES_DATA = [
+      {
+        slug: "what-working-in-back-office-operations-is-teaching-me",
+        title: "What Working in Back-Office Operations Is Teaching Me",
+        status: "Working Draft — In Preparation",
+        category: "Operations",
+        readingTime: "3 min read",
+        excerpt: "Observations on how daily routine processing, document verification, and structured checklists keep client operations running smoothly behind the scenes.",
+        content: `
+          <p>Before you work in a back-office role, it is easy to think of administration as simple data entry. Once you are actually responsible for checking documents, updating client records, and supporting onboarding, you realise how much depends on quiet consistency.</p>
+          <h2>1. Every field in a record represents a real person's transaction</h2>
+          <p>In mutual fund distribution support, a small spelling mismatch or an overlooked KYC requirement does not stay small—it delays onboarding and creates extra work for both the client and the team. Slowing down slightly to verify details on the first pass is always faster than fixing a rejected form later.</p>
+          <h2>2. Clear checklists reduce mental fatigue</h2>
+          <p>When handling multiple routine requests across email, chat, and document folders, relying on memory alone leads to mistakes. Following a repeatable verification sequence ensures the tenth file of the day gets the same attention as the first.</p>
+        `
+      },
+      {
+        slug: "what-ive-learned-about-document-handling-and-record-accuracy",
+        title: "What I've Learned About Document Handling and Record Accuracy",
+        status: "Working Draft — In Preparation",
+        category: "Documentation & KYC",
+        readingTime: "3 min read",
+        excerpt: "Why checking completeness, legibility, and consistency across client documents is the foundation of reliable onboarding support.",
+        content: `
+          <p>Supporting basic KYC verification and client onboarding requires a very practical habit: looking at documents with a calm, methodical eye.</p>
+          <h2>Checking for completeness before processing</h2>
+          <p>One of the most helpful habits I have developed is separating <em>collection</em> from <em>processing</em>. First, I check that every required document is present and clearly readable. Only after confirming completeness do I begin updating records.</p>
+          <h2>Communicating missing details clearly</h2>
+          <p>When a client needs to resubmit a document, vague messages cause frustration. Stating clearly what is needed and why helps resolve the query in a single exchange.</p>
+        `
+      },
+      {
+        slug: "the-difference-between-finishing-a-task-and-finishing-it-properly",
+        title: "The Difference Between Finishing a Task and Finishing It Properly",
+        status: "Working Draft — In Preparation",
+        category: "Work Habits",
+        readingTime: "2 min read",
+        excerpt: "Why closing a ticket or updating a spreadsheet is only truly complete when the next person in the workflow can understand it immediately.",
+        content: `
+          <p>In operations and customer support, work is rarely done in isolation. A record you update today will be read by a colleague tomorrow or referenced when a client calls next month.</p>
+          <p>Finishing a task quickly might mean typing the minimum information required. Finishing a task <em>properly</em> means formatting the entry cleanly, verifying the reference details, and leaving the record organized so anyone on the team can pick it up without confusion.</p>
+        `
+      },
+      {
+        slug: "planned-upcoming-topics",
+        title: "Upcoming Topics in My Notebook",
+        status: "Planned Outline",
+        category: "Career Reflection",
+        readingTime: "2 min read",
+        excerpt: "Additional reflections currently outlined: improving professional communication, lessons from preparing for my first role, and learning new workflows.",
+        content: `
+          <p>As I continue documenting my work and learning, I am preparing notes on the following topics:</p>
+          <ul style="padding-left: 1.25rem; margin-bottom: 1.25rem;">
+            <li>Why Getting the Small Details Right Matters at Work</li>
+            <li>What I Learned While Preparing for My First Professional Opportunities</li>
+            <li>How I'm Improving My Professional Communication</li>
+            <li>What I Wish I Had Understood About Job Hunting Earlier</li>
+            <li>Learning a New Workflow Without Knowing Everything in Advance</li>
+          </ul>
+        `
+      }
+    ];
+
+    /**
+     * 2. DECOUPLED LEARNING LOG DATA
+     * Short, dated entries grounded strictly in verified facts from the prompt.
+     */
+    const LEARNING_LOG_DATA = [
+      {
+        date: "Current Operational Practice (Sept 2025 – Present)",
+        topic: "KYC Documentation & Onboarding Verification",
+        explanation: "Practising systematic verification of client onboarding documents and supporting basic KYC checks at Smart Capital.",
+        learned: "Learned how to spot common documentation gaps early and maintain clean status tracking across client records."
+      },
+      {
+        date: "Ongoing Workplace Practice",
+        topic: "Professional Written Communication (Email & Chat Support)",
+        explanation: "Writing clear, polite, and structured responses to routine customer queries through email and chat.",
+        learned: "Learned that concise formatting and direct answers reduce follow-up confusion and help clients resolve routine questions faster."
+      },
+      {
+        date: "Ongoing Skill Refinement",
+        topic: "Spreadsheet Organisation & Record Maintenance in Microsoft Excel",
+        explanation: "Maintaining and updating client information cleanly using Microsoft Excel and Word for daily administrative workflows.",
+        learned: "Focused on consistent formatting, careful data entry, and cross-checking rows to prevent record discrepancies."
+      },
+      {
+        date: "Post-Graduation Self-Preparation",
+        topic: "CV Structuring, Interview Readiness & Recruiter Communication",
+        explanation: "Used self-directed preparation time to refine my CV, practise professional English answers, and understand what operations teams look for.",
+        learned: "Learned to present my experience honestly and clearly—focusing on practical tasks and reliability rather than generic buzzwords."
+      }
+    ];
+
+    /**
+     * 3. RENDER FUNCTIONS
+     */
+    function renderNotesLists() {
+      const homeList = document.getElementById('home-notes-list');
+      const fullList = document.getElementById('full-notes-list');
+
+      const createNoteItemHTML = (note) => `
+        <li class="editorial-list-item">
+          <div class="note-meta">
+            <div>${note.category} · ${note.readingTime}</div>
+            <span class="status-badge">${note.status}</span>
+          </div>
+          <div>
+            <button class="note-title-btn" onclick="openNoteReader('${note.slug}')">
+              ${note.title}
+            </button>
+            <p class="text-muted" style="font-size: 0.94rem; margin-bottom: 0;">
+              ${note.excerpt}
+            </p>
+          </div>
+        </li>
+      `;
+
+      if (homeList) {
+        homeList.innerHTML = NOTES_DATA.slice(0, 3).map(createNoteItemHTML).join('');
+      }
+      if (fullList) {
+        fullList.innerHTML = NOTES_DATA.map(createNoteItemHTML).join('');
+      }
+    }
+
+    function renderLearningLog() {
+      const container = document.getElementById('learning-log-container');
+      if (!container) return;
+
+      container.innerHTML = LEARNING_LOG_DATA.map(entry => `
+        <article class="log-entry">
+          <div class="log-entry-header">
+            <strong>${entry.topic}</strong>
+            <span class="text-muted" style="font-size: 0.82rem;">${entry.date}</span>
+          </div>
+          <p style="font-size: 0.95rem; margin-bottom: 0.65rem;">
+            <strong>Focus:</strong> ${entry.explanation}
+          </p>
+          <p class="text-muted" style="font-size: 0.92rem; margin-bottom: 0;">
+            <strong>Takeaway:</strong> ${entry.learned}
+          </p>
+        </article>
+      `).join('');
+    }
+
+    function openNoteReader(slug) {
+      const note = NOTES_DATA.find(n => n.slug === slug);
+      if (!note) return;
+
+      navigateTo('notes');
+      document.getElementById('notes-index-container').style.display = 'none';
+      const readerContainer = document.getElementById('note-reader-container');
+      const readerContent = document.getElementById('note-reader-content');
+
+      readerContent.innerHTML = `
+        <span class="meta-label">${note.category} · ${note.readingTime} · ${note.status}</span>
+        <h1 style="margin-bottom: 1.5rem;">${note.title}</h1>
+        <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
+          ${note.content}
+        </div>
+      `;
+      readerContainer.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function closeNoteReader() {
+      document.getElementById('note-reader-container').style.display = 'none';
+      document.getElementById('notes-index-container').style.display = 'block';
+    }
+
+    /**
+     * 4. ACCESSIBLE NAVIGATION & VIEW ROUTER
+     */
+    function navigateTo(viewId, event) {
+      if (event) event.preventDefault();
+
+      // Hide all views, show target view
+      document.querySelectorAll('.page-view').forEach(sec => sec.classList.remove('active'));
+      const targetSection = document.getElementById(`view-${viewId}`);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+
+      // Reset note reader if navigating to notes
+      if (viewId === 'notes') {
+        closeNoteReader();
+      }
+
+      // Update active nav link
+      document.querySelectorAll('.nav-link').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-target') === viewId);
+      });
+
+      // Close mobile menu if open
+      const nav = document.getElementById('primaryNav');
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Mobile Menu Toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+      const nav = document.getElementById('primaryNav');
+      const isOpen = nav.classList.toggle('open');
+      this.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Initialize Content on Load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNotesLists();
+      renderLearningLog();
+    });
+  </script>
+</body>
+</html>
