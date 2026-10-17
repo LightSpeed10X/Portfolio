@@ -1,6 +1,6 @@
 const toggle=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav-links');
-const themeKey='mostafizur-theme';
+const themeKey='mostafizur-theme-v2';
 
 const applyTheme=theme=>{
   document.documentElement.dataset.theme=theme;
@@ -18,7 +18,7 @@ try{
 }catch(error){
   console.warn('Theme preference could not be loaded from local storage.',error);
 }
-applyTheme(savedTheme==='dark'||savedTheme==='light'?savedTheme:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+applyTheme(savedTheme==='dark'||savedTheme==='light'?savedTheme:'light');
 
 if(nav){
   const themeToggle=document.createElement('button');
