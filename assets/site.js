@@ -74,3 +74,29 @@ if(toggle&&nav){
   else desktopQuery.addListener(resetDesktopMenu);
 }
 document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+
+const contactForm=document.querySelector('[data-contact-form]');
+if(contactForm){
+  const status=contactForm.querySelector('[data-form-status]');
+  contactForm.addEventListener('submit',event=>{
+    event.preventDefault();
+    if(!contactForm.checkValidity()){
+      status.textContent='Please complete each field and enter a valid email address.';
+      status.classList.add('is-error');
+      status.setAttribute('role','alert');
+      status.setAttribute('aria-live','assertive');
+      contactForm.reportValidity();
+      return;
+    }
+    status.textContent='Thanks for writing. This demo does not send messages; please email mk@outlook.in to get in touch.';
+    status.classList.remove('is-error');
+    status.setAttribute('role','status');
+    status.setAttribute('aria-live','polite');
+  });
+  contactForm.addEventListener('input',()=>{
+    status.textContent='';
+    status.classList.remove('is-error');
+    status.setAttribute('role','status');
+    status.setAttribute('aria-live','polite');
+  });
+}
